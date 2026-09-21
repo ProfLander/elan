@@ -1000,6 +1000,15 @@
 (define-key nxedit-backspace-map (kbd "D")
             #'flymake-show-project-diagnostics)
 
+;;;;; Special symbols
+
+(defun insert-lowercase-lambda ()
+  (interactive)
+  (insert "λ"))
+
+(evil-global-set-key 'normal (kbd "C-z") #'insert-lowercase-lambda)
+(evil-global-set-key 'insert (kbd "C-z") #'insert-lowercase-lambda)
+
 ;;; Project-specific
 
 (put 'nonterminal 'racket-indent-function 1)
