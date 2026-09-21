@@ -372,17 +372,6 @@
 
 (add-hook 'racket-hash-lang-mode-hook #'lsp)
 
-;;;;; Open REPL in its own window
-
-(add-to-list
- 'display-buffer-alist
- '("^\\*Racket REPL"
-   (display-buffer-in-direction)
-   (direction . rightmost)
-   (window-width . 80)
-   (preserve-size . (t . nil))
-   (inhibit-same-window . t)))
-
 ;; redraw flymake margins on configuration change
 ;; prevents clobbering by visual-column-mode
 
