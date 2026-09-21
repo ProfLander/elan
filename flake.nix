@@ -40,14 +40,22 @@
           highlight-sexp
         ];
       };
-    in
-    {
-      packages.${system}.default = pkgs.buildEnv {
+
+      elan = pkgs.buildEnv {
         name = "emacs-environment";
 
         paths = [
           emacs
           pkgs.wl-clipboard
+        ];
+      };
+    in
+    {
+      packages.${system}.default = elan;
+
+      devShells.${system}.default = pkgs.mkShell {
+        packages = [
+          elan
         ];
       };
     };
