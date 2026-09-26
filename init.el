@@ -352,6 +352,9 @@
   (racket-hash-lang-mode . nx-disable-lsp-eldoc-hover)
   (racket-hash-lang-mode . racket-xp-mode)
 
+  :custom
+  (racket-xp-eldoc-level 'minimal)
+
   :config
 
   ; Prevent eldoc's pre-command refresh from causing flicker
