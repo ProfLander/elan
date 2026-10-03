@@ -34,6 +34,13 @@
   :config
   (no-littering-theme-backups))
 
+;;;; Maximize undo history limits
+
+(setq undo-limit most-positive-fixnum
+      undo-strong-limit most-positive-fixnum
+      undo-outer-limit (* 1024 1024 1024)
+      undo-ask-before-discard t)
+
 ;;;; Enable undo persistence
 
 (use-package undo-fu-session
