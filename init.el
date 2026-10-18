@@ -244,7 +244,7 @@
 (use-package evil-terminal-cursor-changer
   :after evil
   :config
-  (etcc-on))
+  (evil-terminal-cursor-changer-activate))
 
 ;;;;; Structural editing
 
