@@ -382,6 +382,23 @@
 
 (add-hook 'racket-hash-lang-mode-hook #'lsp)
 
+;;;;; Custom bindings for REPL mode
+
+(evil-define-key 'normal racket-repl-mode-map
+  (kbd "<up>") #'racket-repl-previous-input)
+
+(evil-define-key 'normal racket-repl-mode-map
+  (kbd "<down>") #'racket-repl-next-input)
+
+(evil-define-key 'normal racket-repl-mode-map
+  (kbd "<left>") #'racket-repl-previous-prompt-or-run)
+
+(evil-define-key 'normal racket-repl-mode-map
+  (kbd "<right>") #'racket-repl-next-prompt-or-run)
+
+(evil-define-key 'normal racket-repl-mode-map
+  (kbd "RET") #'racket-repl-submit)
+
 ;; redraw flymake margins on configuration change
 ;; prevents clobbering by visual-column-mode
 
