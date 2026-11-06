@@ -342,6 +342,10 @@
   (racket-mode . rainbow-delimiters-mode)
   (racket-hash-lang-mode . rainbow-delimiters-mode))
 
+;;;; Magit
+
+(use-package magit)
+
 ;;;; Nix
 
 (use-package nix-mode
